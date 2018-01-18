@@ -12,10 +12,9 @@ LJSigma = AtomSpacing / 2^(1 / 6);
 LJEpsilon = 1e-21;
 
 PhiCutoff = 3 * AtomSpacing * 1.1;
-
+%(rad, X0, Y0, VX0, VY0, InitDist, Temp, Type)
 T = 30;
-
-AddRectAtomicArray(10, 10, 0, 0, 0, 0, 0, T, 0);
+AddHalfCircAtomicArray(5, 0, 0, 0, 0, 0, T, 0, 1, 3);
 % vy0 = -sqrt(0.02*Ep/Mass1);
 % AddRectAtomicArray(4,4,0,12*AtomSpacing,0,vy0,0,T,1);
 Ep = 2;
