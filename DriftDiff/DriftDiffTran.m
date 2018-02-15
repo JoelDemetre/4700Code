@@ -44,6 +44,8 @@ if strcmp(Simulation,'GaussianTwoCar')
     eval('SetGaussian2CarParas');
 elseif strcmp(Simulation,'GaussianTwoCarRC')
     eval('SetGaussian2CarParasRCOnly');
+elseif strcmp(Simulation, 'PA8')
+    eval('PA8');
 elseif strcmp(Simulation,'GaussianSingle0V')
     eval('SetGaussian1CarParas0V');
 elseif strcmp(Simulation,'GaussianSingle1V')

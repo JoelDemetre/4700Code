@@ -6,7 +6,7 @@ deltay = 1;
 B = zeros(1, nx*ny);
 
 
-G = sparse(nx*nx, ny*ny);
+G = sparse(nx*ny, nx*ny);
 
 for i = 1:nx
    G(nx,:) = 0;
@@ -26,6 +26,7 @@ for i = 1:nx
         elseif j == ny || j == 1
            G(n,:) = 0;
            G(n,n) = 1;
+            
         else
             G(n,n) = -4;
             G(n,j + (i-2)*ny) = 1;
@@ -42,10 +43,10 @@ end
 
 [E,D] = eigs(G,9,'SM');
 
-V = zeros(50,50,9);
+V = zeros(nx,ny,9);
 
 
 for i = 1:9
-   V(:,:,i)= reshape(E(:,i), nx, ny);
+   V(:,:,i)= reshape(E(:,i), [nx, ny]);
 end
-surf(V(:,:,9));
+surf(V(:,:,3));

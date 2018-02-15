@@ -38,5 +38,4 @@ for i =0:timestep:totaltime
     hold on;
 end
 hold off;
-k = 5;
-F = @(x) k*(x-x0)^2;
+
